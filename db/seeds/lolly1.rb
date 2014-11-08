@@ -1,3 +1,4 @@
+# encoding: utf-8
 story = Story.create! title: "What Becomes Me: How To Be A Lollybuster vol 1"
 
 story.episodes.create! index: 1,

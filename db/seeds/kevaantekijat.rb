@@ -1,3 +1,4 @@
+# encoding: utf-8
 story = Story.create! title: "Kevääntekijät"
 
 story.episodes.create! index: 1,

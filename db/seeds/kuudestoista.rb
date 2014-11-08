@@ -1,3 +1,4 @@
+# encoding: utf-8
 story = Story.create! title: "Etsintääni"
 
 story.episodes.create! index: 1,

@@ -1,3 +1,4 @@
+# encoding: utf-8
 story = Story.create! title: "Changing Grounds: How To Be A Lollybuster vol 2"
 
 story.episodes.create! index: 1,
