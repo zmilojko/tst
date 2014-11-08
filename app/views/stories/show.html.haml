@@ -1,8 +1,8 @@
 %p#notice= notice
 
-%p
-  %b Title:
-  = @story.title
+%h1= @story.title
+-@story.episodes.each do |episode|
+  %div=link_to "Episode #{episode.index}", episode
 
 = link_to 'Edit', edit_story_path(@story)
 \|

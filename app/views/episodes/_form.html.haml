@@ -11,9 +11,10 @@
     = f.number_field :index
   .field
     = f.label :story
-    = f.text_field :story
+    = f.collection_select(:story_id, Story.all, :id, :title)
+    -#= f.text_field :story
   .field
     = f.label :content
-    = f.text_field :content
+    = f.text_area :content
   .actions
     = f.submit 'Save'

@@ -1,14 +1,9 @@
 %p#notice= notice
 
-%p
-  %b Index:
-  = @episode.index
-%p
-  %b Story:
-  = @episode.story
-%p
-  %b Content:
-  = @episode.content
+%h1=@episode.story.title
+%h2 Episode #{@episode.index}
+
+=Markdown.render(@episode.content).html_safe
 
 = link_to 'Edit', edit_episode_path(@episode)
 \|
