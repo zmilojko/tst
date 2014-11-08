@@ -10,14 +10,18 @@
   - @stories.each do |story|
     %tr
       %td= link_to story.title, story
-      %td= link_to 'Edit', edit_story_path(story)
-      %td= link_to 'Destroy', story, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      - if user_signed_in?
+        %td= link_to 'Edit', edit_story_path(story)
+        %td= link_to 'Destroy', story, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      - else
+        %td
+        %td
     -story.episodes.each do |episode|
       %tr
         %td
         %td=link_to "Episode #{episode.index}", episode
         %td
 
-%br
-
-= link_to 'New Story', new_story_path
+- if user_signed_in?
+  %br
+  = link_to 'New Story', new_story_path
